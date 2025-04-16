@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Add Device</h1>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.ip_address.label }}<br>
+        {{ form.ip_address(size=32) }}
+    </p>
+    <p>
+        {{ form.name.label }}<br>
+        {{ form.name(size=32) }}
+    </p>
+    <!-- Add other form fields similarly -->
+    <p><input type="submit" value="Add Device"></p>
+</form>
+{% endblock %}
