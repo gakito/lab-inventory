@@ -25,9 +25,9 @@ class DeviceForm(FlaskForm):
 class OwnerForm(FlaskForm):
     name = StringField('Name', validators=[InputRequired()])
     email = StringField('e-mail', validators=[Email()])
-    wwid = StringField('WWID', validators=[Optional()])
 
 class LocationForm(FlaskForm):
     name = StringField('Location name', validators=[InputRequired()])
     building = StringField('Building', validators=[InputRequired()])
     lab_group = StringField('Lab Group', validators=[InputRequired()])
+    description = StringField('Description', validators=[Optional()])
